@@ -10,7 +10,7 @@ const styles = {
     justifyContent: "space-between",
     height: 80,
     alignItems: "center",
-    padding: "0 50px",
+    padding: "0 40px",
   },
   logo: {
     width: 70,
@@ -27,6 +27,7 @@ const styles = {
   },
   lists: {
     color: "#ffff",
+    fontWeight: 'bold'
   },
 };
 
@@ -61,15 +62,16 @@ export const NavbarUser = (props) => {
             <img src={Logo} style={styles.logo} alt="Logo" />
           </button>
         </div>
+
         <div style={styles.right}>
           <button
-            style={{ color: activeLink ? "red" : "#ffff" }}
+            style={{ color: activeLink ? "red" : "#ffff", fontWeight: 'bold' }}
             onClick={() => navigate("/complain")}
           >
             Complain
           </button>
           <button
-            style={{ color: activeProfile ? "red" : "#ffff" }}
+            style={{ color: activeProfile ? "red" : "#ffff", fontWeight: 'bold' }}
             onClick={() => navigate("/profile")}
           >
             Profile

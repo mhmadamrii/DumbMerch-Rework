@@ -11,23 +11,25 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     gap: 50,
+    height: 370
   },
   left: {
     // border: '1px solid red',
     width: 420,
-    height: 500,
+    height: '100%',
   },
   right: {
+    // border: '1px solid red',
     width: 420,
   },
   desc: {
     color: "#ffff",
-    marginTop: 60
+    marginTop: 20
   },
   btn: {
     width: "100%",
-    height: 50,
-    marginTop: 40,
+    height: 40,
+    marginTop: 10,
   },
 };
 
@@ -43,7 +45,7 @@ export default function DetailProduct() {
           <img
             src={Mouse}
             alt="Detail image"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "80%", height: "100%" }}
           />
         </div>
 

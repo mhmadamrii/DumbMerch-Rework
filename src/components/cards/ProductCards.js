@@ -8,8 +8,7 @@ const styles = {
   container: {
     backgroundColor: '#212121',
     width: 245,
-    height: 410,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   imgProduct: {
     display: 'block',
@@ -42,8 +41,8 @@ export default function ProductCards(props) {
 
         <div style={styles.desc}>
           <h5 style={{ backgroundColor: '#212121', color: '#F74D4D' }}>{nameProduct}</h5>
-          <h5 style={{ backgroundColor: '#212121' }}>Rp{priceProduct}</h5>
-          <h5 style={{ backgroundColor: '#212121' }}>{stockProduct}</h5>
+          <h6 style={{ backgroundColor: '#212121' }}>Rp{priceProduct}</h6>
+          <h6 style={{ backgroundColor: '#212121' }}>stock: {stockProduct}</h6>
         </div>
       </div>
     </React.Fragment>

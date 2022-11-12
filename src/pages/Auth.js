@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Logo from "../assets/Logo.png";
 import { Row, Col, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { strings } from "../components/strings/String";
+import { toast, ToastContainer } from "react-toastify";
 
 const styles = {
   container: {
-    margin: '120px auto',
+    margin: '120px auto 0 auto',
     // border: '1px solid red'
   },
   quotes: {
@@ -37,10 +39,26 @@ const styles = {
   }
 }
 
+const btnToast = () => {
+  toast.success("Testing toast", {
+    theme: "dark"
+  })
+}
+
 const Login = () => {
 
   let navigate = useNavigate()
-  console.log("navigate", navigate)
+
+  const btnLinkedLogin = () => {
+
+    toast.success("Login", {
+      theme: "dark"
+    })
+
+    setTimeout(() => {
+      navigate('/homepage')
+    }, 3000)
+  }
   
   return (
     <React.Fragment>
@@ -49,8 +67,8 @@ const Login = () => {
           <h1 style={{ color: '#ffff', backgroundColor: '#181818' }}>Login</h1>
           <form style={{backgroundColor: '#181818'}}>
             <input type="email" style={styles.inputGroup} placeholder="Email" />
-            <input type="password" style={styles.inputGroup} placeholder="password" />
-            <Button variant="danger" style={{ width: '100%', height: 50, marginTop: 40 }} onClick={() => navigate('/homepage')}>Login</Button>
+            <input type="password" style={styles.inputGroup} placeholder="Password" />
+            <Button variant="danger" style={{ width: '100%', height: 50, marginTop: 40 }} onClick={btnLinkedLogin}>Login</Button>
           </form>
         </div>
       </div>
@@ -68,7 +86,7 @@ const Register = () => {
             <input type="text" style={styles.inputGroup} placeholder="Name" /> 
             <input type="email" style={styles.inputGroup} placeholder="Email" />
             <input type="password" style={styles.inputGroup} placeholder="password" />
-            <Button variant="danger" style={{ width: '100%', height: 50, marginTop: 40 }}>Login</Button>
+            <Button variant="danger" style={{ width: '100%', height: 50, marginTop: 40 }} onClick={btnToast}>Register</Button>
           </form>
         </div>
       </div>
@@ -81,6 +99,9 @@ export default function Auth() {
   // switch register/login
   const [ isRegister, setIsRegister ] = useState(false)
 
+  // stringLanguage
+  const leftString = strings[0]
+
   const switchLogin = () => {
     setIsRegister(false)
   }
@@ -91,12 +112,13 @@ export default function Auth() {
 
   return (
     <React.Fragment>
+      <ToastContainer style={{ backgroundColor: '#0000' }} />
       <div className="container" style={styles.container}>
         <Row>
           <Col>
             <img src={Logo} alt="logo" width="250px" />
-            <h1 style={styles.quotes}>Easy, Fast, and Reliable</h1>
-            <p style={styles.texts}>Go shopping for merchandise, just go to dumb merch shopping. the biggest merchandise in Indonesia</p>
+            <h1 style={styles.quotes}>{leftString.tumb_nail}</h1>
+            <p style={styles.texts}>{leftString.go_shoping}</p>
 
             <div className="btn-group-auth mt-5">
               <Button variant="danger" style={{ marginRight: 10, width: 140 }} onClick={switchLogin}>Login</Button>

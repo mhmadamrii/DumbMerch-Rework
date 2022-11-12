@@ -9,14 +9,15 @@ const styles = {
   container: {
     // border: '1px solid red',
     margin: '80px auto',
-    width: 1500,
+    width: 1200,
   },
   cardLists: {
     // border: '1px solid blue',
     display: 'flex',
     flexWrap: 'wrap',
     padding: 10,
-    gap: 20
+    gap: 20,
+    width: 1200,
   }
 }
 
