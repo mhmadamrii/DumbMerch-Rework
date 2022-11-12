@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const styles = {
   container: {
-    margin: '300px auto'
+    margin: '120px auto',
+    // border: '1px solid red'
   },
   quotes: {
     color: '#ffff',
@@ -37,7 +38,10 @@ const styles = {
 }
 
 const Login = () => {
+
   let navigate = useNavigate()
+  console.log("navigate", navigate)
+  
   return (
     <React.Fragment>
       <div>
@@ -46,7 +50,7 @@ const Login = () => {
           <form style={{backgroundColor: '#181818'}}>
             <input type="email" style={styles.inputGroup} placeholder="Email" />
             <input type="password" style={styles.inputGroup} placeholder="password" />
-            <Button variant="danger" style={{ width: '100%', height: 50, marginTop: 40 }} onClick={navigate('/home')}>Login</Button>
+            <Button variant="danger" style={{ width: '100%', height: 50, marginTop: 40 }} onClick={() => navigate('/homepage')}>Login</Button>
           </form>
         </div>
       </div>
