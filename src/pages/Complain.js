@@ -4,7 +4,8 @@ import { NavbarUser, NavbarAdmin } from "../components/navbar/Navbar";
 const styles = {
   container: {
     border: '1px solid red',
-    margin: '80px auto'
+    margin: '80px auto',
+    width: 1200
   }
 }
 

@@ -8,7 +8,8 @@ import { toast, ToastContainer } from "react-toastify";
 const styles = {
   container: {
     margin: '120px auto 0 auto',
-    // border: '1px solid red'
+    // border: '1px solid red',
+    width: '100%'
   },
   quotes: {
     color: '#ffff',
@@ -63,7 +64,7 @@ const Login = () => {
   return (
     <React.Fragment>
       <div>
-        <div style={styles.mainInput}>
+        <div className="media-align-center" style={styles.mainInput}>
           <h1 style={{ color: '#ffff', backgroundColor: '#181818' }}>Login</h1>
           <form style={{backgroundColor: '#181818'}}>
             <input type="email" style={styles.inputGroup} placeholder="Email" />
@@ -113,12 +114,12 @@ export default function Auth() {
   return (
     <React.Fragment>
       <ToastContainer style={{ backgroundColor: '#0000' }} />
-      <div className="container" style={styles.container}>
+      <div className="container media-align-center" style={styles.container}>
         <Row>
           <Col>
             <img src={Logo} alt="logo" width="250px" />
             <h1 style={styles.quotes}>{leftString.tumb_nail}</h1>
-            <p style={styles.texts}>{leftString.go_shoping}</p>
+            <p className="media-align-center" style={styles.texts}>{leftString.go_shoping}</p>
 
             <div className="btn-group-auth mt-5">
               <Button variant="danger" style={{ marginRight: 10, width: 140 }} onClick={switchLogin}>Login</Button>

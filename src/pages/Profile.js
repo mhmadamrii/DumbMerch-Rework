@@ -9,12 +9,18 @@ const styles = {
   container: {
     // border: '1px solid red',
     margin: '80px auto',
-    width: 1200,
+    width: 1202,
     display: 'flex',
-    height: 370
+    flexWrap: 'wrap',
+    height: 370,
+    '@media (max-width: 500px)': {
+      border: 'none',
+      backgroundColor: 'blue'
+    },
   },
   left: {
     width: 300,
+    // border: '1px solid red'
   },
   mid: {
     width: 400,
@@ -88,7 +94,10 @@ export default function Profile() {
             <h6 style={styles.changableInfo}>Email@gmail.com</h6>
 
             <h6 style={styles.staticInfo}>Phone</h6>
-            <h6 style={styles.changableInfo}>Gender</h6>
+            <h6 style={styles.changableInfo}>08744994</h6>
+
+            <h6 style={styles.staticInfo}>Gender</h6>
+            <h6 style={styles.changableInfo}>Male</h6>
 
             <h6 style={styles.staticInfo}>Adress</h6>
             <h6 style={styles.changableInfo}>Duis et exercitation occaecat reprehenderit fugiat do ea sunt velit. </h6>
