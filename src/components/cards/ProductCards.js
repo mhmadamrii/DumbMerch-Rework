@@ -9,6 +9,7 @@ const styles = {
     backgroundColor: '#212121',
     width: 245,
     cursor: 'pointer',
+    // border: '1px solid red'
   },
   imgProduct: {
     display: 'block',

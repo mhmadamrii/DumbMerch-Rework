@@ -1,126 +1,103 @@
 import React, { useState } from "react";
-import { NavbarUser, NavbarAdminn } from "../components/navbar/Navbar";
-import ProfileJohn from "../assets/Profile.png";
-import Logo from "../assets/Logo.png";
+import { NavbarUser } from "../components/navbar/Navbar";
+import ProfileImg from "../assets/Profile.png";
 import Mouse from "../assets/Mouse.png";
-
-
-const styles = {
-  container: {
-    // border: '1px solid red',
-    margin: '80px auto',
-    width: 1202,
-    display: 'flex',
-    flexWrap: 'wrap',
-    height: 370,
-    '@media (max-width: 500px)': {
-      border: 'none',
-      backgroundColor: 'blue'
-    },
-  },
-  left: {
-    width: 300,
-    // border: '1px solid red'
-  },
-  mid: {
-    width: 400,
-    // border: '1px solid red'
-  },
-  right: {
-    width: 500,
-    // border: '1px solid red'
-  },
-  wrapper: {
-    marginTop: 20,
-    // border: '1px solid blue',
-  },
-  staticInfo: {
-    color: '#F74D4D',
-    backgroundColor: 'inherit'
-  },
-  changableInfo: {
-    color: '#ffff',
-    margin: '0 0 30px 0',
-    backgroundColor: 'inherit'
-  },
-  listTransaction: {
-    height: 160,
-    // border: '1px solid blue',
-    margin: '0 0 10px 0',
-    display: 'flex',
-    justifyContent: 'space-between',
-    backgroundColor: '#303030',
-    padding: '5px 30px',
-    borderRadius: 10
-  },
-  leftTransaction: {
-  },
-  midTransaction: {
-    backgroundColor: 'inherit',
-    // border: '1px solid red'
-  },
-  rightTransaction: {
-    backgroundColor: 'inherit',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  imgList: {
-    height: '100%'
-  },
-}
+import Logo from "../assets/Logo.png";
 
 export default function Profile() {
+  const styles = {
+    foundation: {
+      // border: "1px solid red",
+      color: "#F74D4D",
+    },
+  };
   return (
     <React.Fragment>
-      <NavbarUser
-        activeProfile
-      />
-      
-      <div style={styles.container}>
-        <div style={styles.left}>
-          <h4 style={{ color: '#F74D4D' }}>My Profile</h4>
-          <div style={styles.wrapper}>
-            <img src={ProfileJohn} alt="Profile image" style={{ width: 250, height: 300 }} />
-          </div>
-        </div>
+      <div>
+        <NavbarUser activeProfile />
+      </div>
 
-        <div style={styles.mid}>
-          <div style={styles.wrapper}><br />
-            <h6 style={styles.staticInfo}>Name</h6>
-            <h6 style={styles.changableInfo}>Yosep</h6>
-
-            <h6 style={styles.staticInfo}>Email</h6>
-            <h6 style={styles.changableInfo}>Email@gmail.com</h6>
-
-            <h6 style={styles.staticInfo}>Phone</h6>
-            <h6 style={styles.changableInfo}>08744994</h6>
-
-            <h6 style={styles.staticInfo}>Gender</h6>
-            <h6 style={styles.changableInfo}>Male</h6>
-
-            <h6 style={styles.staticInfo}>Adress</h6>
-            <h6 style={styles.changableInfo}>Duis et exercitation occaecat reprehenderit fugiat do ea sunt velit. </h6>
-          </div>
-        </div>
-
-        <div style={styles.right}>
-        <h4 style={{ color: '#F74D4D' }}>My Transaction</h4>
-          <div style={styles.wrapper}>
-            <div style={styles.listTransaction}>
-              <div style={styles.leftTransaction}>
-                <img src={Mouse} style={styles.imgList} />
+      <div className="container">
+        <div className="row" style={{ marginTop: 50 }}>
+          <div className="col-8" style={styles.foundation}>
+            <h3>My Profile</h3> <br />
+            <div class="row">
+              <div class="col-5">
+                <img src={ProfileImg} style={{ width: 300, height: 400 }} />
               </div>
+              <div class="col-7">
+                <h5>Name</h5>
+                <p style={{ color: "#ffff" }}>Lorem</p>
 
-              <div style={styles.midTransaction}>
-                <span style={styles.staticInfo}>Mouse</span><br />
-                <span style={styles.staticInfo}>Saturday, 14 Juli 2021</span><br />
-                <span style={styles.changableInfo}>Price: Rp.300.000</span><br /><br /><br />
-                <span style={{ color: '#ffff', backgroundColor: 'inherit' }}>Sub Total: Rp.300.000</span>
+                <h5>Email</h5>
+                <p style={{ color: "#ffff" }}>Lorem</p>
+
+                <h5>Phone</h5>
+                <p style={{ color: "#ffff" }}>Lorem</p>
+
+                <h5>Gender</h5>
+                <p style={{ color: "#ffff" }}>Lorem</p>
+
+                <h5>Adress</h5>
+                <p style={{ color: "#ffff" }}>Lorem</p>
               </div>
+            </div>
+          </div>
 
-              <div style={styles.rightTransaction}>
-                <img src={Logo} style={{ backgroundColor: 'inherit', width: 80 }} />
+          <div className="col-4" style={styles.foundation}>
+            <h3>My Transaction</h3> <br />
+            <div style={styles.foundation}>
+              <div
+                className="row"
+                style={{
+                  // border: "1px solid red",
+                  height: 130,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 10,
+                  backgroundColor: "#303030",
+                }}
+              >
+                <div className="col-3" style={{ backgroundColor: "#303030" }}>
+                  <img
+                    src={Mouse}
+                    style={{
+                      width: "100%",
+                      height: 100,
+                      backgroundColor: "#303030",
+                    }}
+                  />
+                </div>
+                <div className="col-6" style={{ backgroundColor: "#303030" }}>
+                  <p style={{ backgroundColor: "#303030" }}>
+                    lorem ipsum dolor
+                  </p>
+                  <p style={{ backgroundColor: "#303030" }}>
+                    lorem ipsum dolor
+                  </p>
+                </div>
+                <div
+                  className="col-3"
+                  style={{
+                    // border: "1px solid red",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#303030",
+                    borderRadius: 10
+                  }}
+                >
+                  <img
+                    src={Logo}
+                    style={{
+                      width: 50,
+                      height: 50,
+                      backgroundColor: "#303030",
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>

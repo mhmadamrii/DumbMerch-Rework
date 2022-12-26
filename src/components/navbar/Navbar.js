@@ -27,7 +27,7 @@ const styles = {
   },
   lists: {
     color: "#ffff",
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
 };
 
@@ -50,8 +50,7 @@ export const NavbarAdmin = () => {
 };
 
 export const NavbarUser = (props) => {
-
-  const { activeLink, activeProfile } = props
+  const { activeLink, activeProfile } = props;
   let navigate = useNavigate();
 
   return (
@@ -65,13 +64,16 @@ export const NavbarUser = (props) => {
 
         <div style={styles.right}>
           <button
-            style={{ color: activeLink ? "red" : "#ffff", fontWeight: 'bold' }}
+            style={{ color: activeLink ? "red" : "#ffff", fontWeight: "bold" }}
             onClick={() => navigate("/complain")}
           >
             Complain
           </button>
           <button
-            style={{ color: activeProfile ? "red" : "#ffff", fontWeight: 'bold' }}
+            style={{
+              color: activeProfile ? "red" : "#ffff",
+              fontWeight: "bold",
+            }}
             onClick={() => navigate("/profile")}
           >
             Profile
